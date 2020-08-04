@@ -132,8 +132,9 @@ export default class LiteCreditCardInput extends Component {
 
   _iconToShow = () => {
     const { focused, values: { type } } = this.props;
-    if (focused === "cvc" && type === "american-express") return "cvc_amex";
-    if (focused === "cvc") return "cvc";
+    // - we don't want to see cvc image
+    // if (focused === "cvc" && type === "american-express") return "cvc_amex";
+    // if (focused === "cvc") return "cvc";
     if (type) return type;
     return "placeholder";
   }
